@@ -1,0 +1,27 @@
+galaxy_info:
+  author: Simon Oulevay (Alpha Hydrae)
+  description: Installs a Ruby gem with RVM.
+  license: MIT
+  min_ansible_version: 2.0
+
+  platforms:
+    - name: Darwin
+      versions:
+        - all
+    - name: Fedora
+      versions:
+        - all
+    - name: Ubuntu
+      versions:
+        - all
+
+  galaxy_tags:
+    - ruby
+    - gem
+    - rvm
+
+allow_duplicates: yes
+
+dependencies:
+  - role: AlphaHydrae.multipass
+  - role: AlphaHydrae.rvm

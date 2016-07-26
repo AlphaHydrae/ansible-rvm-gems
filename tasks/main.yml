@@ -1,0 +1,5 @@
+---
+
+- name: Install gem with RVM
+  command: su - {{ rvm_gem_user }} -c "cd && source {{ rvm_gem_script }} && gem install {{ rvm_gem_install_options }} {{ item.name }}" creates="{{ rvm_gem_dir }}/gems/ruby-{{ rvm_gem_ruby_version }}/bin/{{ item.bin | default(item.name) }}"
+  with_items: "{{ rvm_gems }}"
